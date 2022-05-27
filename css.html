@@ -6,11 +6,20 @@
         <style>
             body { font-family: 'Times New Roman'; }
             #header, #footer { 
-               font-family:Verdana; 
-               text-align: center;
-               background-color:aquamarine;
+               font-family:Verdana; text-align: center;
+               background:aquamarine;
+               width: 800px; margin: 0 auto;
             }
-            .article { text-align: center; }
+            #section {
+                width: 800px; margin: 0 auto;
+                overflow: hidden;
+            }
+            .content { 
+                width: 600px; float: left;
+            }
+            .article {
+                width: 200px; float: left;
+            }
         </style>
     </head>
     <body>
@@ -19,7 +28,7 @@
         <hr>
         </div>
         <div id="section">
-            <div class="article">
+            <div class="content">
                 <h2>AWS Computing Service</h2>
                 <ul class="list">
                     <li>Amazon EC2 Service</li>
