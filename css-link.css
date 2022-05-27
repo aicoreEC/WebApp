@@ -1,0 +1,16 @@
+* { font-family: 'Times New Roman'; }
+#header, #footer { 
+    font-family:Verdana; text-align: center;
+    background:aquamarine;
+    width: 800px; margin: 0 auto;
+}
+#section {
+    width: 800px; margin: 0 auto;
+    overflow: hidden;
+}
+.content { 
+    width: 600px; float: left;
+}
+.article {
+    width: 200px; float: left;
+}
