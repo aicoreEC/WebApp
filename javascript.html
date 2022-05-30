@@ -6,9 +6,9 @@
         <script>
             let date = new Date(); // 시스템 객체
 
-            let year = date.getFullYear(); // 객체의 메서드( = 함수 ) 호출
-            let hours = date.getHours();
-            let month = date.getMonth() + 1;
+            let year = date.getFullYear(); // 년도, 객체의 메서드( = 함수 ) 호출
+            let hours = date.getHours(); // 시간
+            let month = date.getMonth() + 1; // 월
 
             alert( year + ' ' + month );
 
@@ -27,6 +27,12 @@
             } else {
                 alert( '겨울이네요!!!' );
             }
+
+            let sum = 0;
+            for ( let i = 1; i <= 100; i += 1 ) {
+                sum += i;
+            }
+            alert( '1 ~ 100 = ' + sum );
         </script>
     </head>
     <body></body>
