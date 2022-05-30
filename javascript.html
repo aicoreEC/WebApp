@@ -4,14 +4,28 @@
         <meta charset="utf-8">
         <title>JavaScript 문법 확인</title>
         <script>
-            let date = new Date();
-            let year = date.getFullYear();
+            let date = new Date(); // 시스템 객체
+
+            let year = date.getFullYear(); // 객체의 메서드( = 함수 ) 호출
             let hours = date.getHours();
+            let month = date.getMonth() + 1;
+
+            alert( year + ' ' + month );
 
             if ( hours < 12 ) {
                 alert( '오전입니다.' );
             } else {
                 alert( '오후입니다.' );
+            }
+
+            if ( 3 <= month && month <= 5 ) {
+                alert( '봄이네요!!!' );
+            } else if ( 6 <= month && month <= 8 ) {
+                alert( '여름이네요!!!' );
+            } else if ( 9 <= month && month <= 11 ) {
+                alert( '가을이네요!!!' );
+            } else {
+                alert( '겨울이네요!!!' );
             }
         </script>
     </head>
