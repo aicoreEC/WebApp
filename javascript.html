@@ -70,6 +70,7 @@
             // 1 ~ 100 짝수합
             alert( '1 ~ 100사이 짝수합 = ' + my_sum( 2, 100, 2 ) );
 
+            // 익명 함수 이용
             sum = function ( start, stop, step ) {
                 let sum = 0;
                 for ( let i = start; i <= stop; i += step ) {
@@ -78,6 +79,17 @@
                 return sum;
             }
             alert( '1 ~ 100사이 합( 익명 함수 이용 ) : ' + sum( 1, 100, 1 ) );
+
+            // 콜백 함수 이용
+            function callTenTimes( callback ) {
+                for ( let i = 1; i <= 3; i += 1 ) {
+                    callback();
+                }
+            }
+
+            callTenTimes( function () {
+                alert( '콜백함수' )
+            } );
         </script>
     </head>
     <body></body>
