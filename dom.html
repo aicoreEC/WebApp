@@ -6,19 +6,25 @@
         <style>
             h1, h2 { text-align: center; }
         </style>
+<!--
+    <head></head> 태그에 JavaScript를 이용한 DOM 객체 제어시 구조
         <script>
+            // window 객체의 onload() 메서드에 콜백 등록
             window.onload = function () {
                 document.querySelector( 'h1' ).style.backgroundColor = 'red';
                 document.querySelector( 'h2' ).style.color = 'red';
             };
         </script>
+-->        
     </head>
     <body>
         <h1>Process - 1</h1>
         <h2>Process - 2 </h2>
         
+        <!-- <body></body> 태그에 JavaScript를 이용한 DOM 객체 제어 -->        
         <script>
-
+            document.querySelector( 'h1' ).style.backgroundColor = 'red';
+            document.querySelector( 'h2' ).style.color = 'red';
         </script>
     </body>
 </html>
