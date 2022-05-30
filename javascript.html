@@ -47,6 +47,27 @@
                 }
             }
             alert( '1 ~ 100 사이의 짝수 합은 ' + sum );
+
+            // 1부터 원하는 범위의 합을 계산하는 함수 정의
+            function my_sum( start, stop, step ) {
+                let sum = 0;
+                for ( let i = start; i <= stop; i += step ) {
+                    sum += i;
+                }
+                return sum;
+            }
+
+            // 1 ~ 100 합 
+            alert( '1 ~ 100 = ' + my_sum( 1, 100, 1 ) );
+
+            // 1 ~ 1000 합
+            alert( '1 ~ 100 = ' + my_sum( 1, 1000, 1 ) );
+
+            // 1 ~ 100 홀수합
+            alert( '1 ~ 100사이 홀수합 = ' + my_sum( 1, 100, 2 ) );
+
+            // 1 ~ 100 짝수합
+            alert( '1 ~ 100사이 짝수합 = ' + my_sum( 2, 100, 2 ) );
         </script>
     </head>
     <body></body>
