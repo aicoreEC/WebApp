@@ -54,20 +54,30 @@
                 for ( let i = start; i <= stop; i += step ) {
                     sum += i;
                 }
-                return sum;
+                return sum; // 함수 호출쪽에 되돌림값, 되돌림값을 하나만 가능
             }
 
+            // 함수 호출
             // 1 ~ 100 합 
             alert( '1 ~ 100 = ' + my_sum( 1, 100, 1 ) );
 
             // 1 ~ 1000 합
-            alert( '1 ~ 100 = ' + my_sum( 1, 1000, 1 ) );
+            alert( '1 ~ 1000 = ' + my_sum( 1, 1000, 1 ) );
 
             // 1 ~ 100 홀수합
             alert( '1 ~ 100사이 홀수합 = ' + my_sum( 1, 100, 2 ) );
 
             // 1 ~ 100 짝수합
             alert( '1 ~ 100사이 짝수합 = ' + my_sum( 2, 100, 2 ) );
+
+            sum = function ( start, stop, step ) {
+                let sum = 0;
+                for ( let i = start; i <= stop; i += step ) {
+                    sum += i;
+                }
+                return sum;
+            }
+            alert( '1 ~ 100사이 합( 익명 함수 이용 ) : ' + sum( 1, 100, 1 ) );
         </script>
     </head>
     <body></body>
