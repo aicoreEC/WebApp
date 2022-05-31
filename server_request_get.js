@@ -16,7 +16,10 @@ const server = http.createServer( function( request, response) {
     console.log( '--- log end ---' );
 
     response.writeHead( 200, { 'Content-Type':'text/html; charset=utf-8' } );
-    response.end( `var1 [ ${parsedQuery.var1} ] : var2 [ ${parsedQuery.var2} ] : var3 [ ${parsedQuery.var3} ]` );
+    response.end( `var1 [ ${parsedQuery.name} ] : var2 [ ${parsedQuery.age} ] : var3 [ ${parsedQuery.tel} ]` );
 } ).listen( port, function() {
     console.log( `Server is running... [ ${port} ]` );
 } );
+
+// 웹브라우저 입력
+// http://100.20.164.22:8080/?name=홍길동&age=25&tel=010-1234-5678
