@@ -20,8 +20,8 @@ const server = http.createServer( function ( request, response ) {
         response.writeHead( 200, { 'Content-Type':'text/html; charset=utf-8' } );
         response.end( '홍길동' );
     } else {
-        response.writeHead( 200, { 'Content-Type':'text/html; charset=utf-8' } );
-        response.end( '404 Page Not Found' );
+        response.writeHead( 404, { 'Content-Type':'text/html; charset=utf-8' } );
+        //response.end( '404 Page Not Found' );
     }
 } ).listen( port, function() {
     console.log( `Server is running... [ ${port} ]` );
