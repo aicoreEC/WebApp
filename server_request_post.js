@@ -14,7 +14,7 @@ const server = http.createServer( function( request, response ) {
         const parsedQuery = querystring.parse( postdata );
         console.log( parsedQuery );
 
-        response.writeHead( 200, { 'Content-Type':'test/html; charset=utf-8' } );
+        response.writeHead( 200, { 'Content-Type':'text/html; charset=utf-8' } );
         response.end( `var1 = [ ${parsedQuery.var1} ]` );
     } )
 } ).listen( port, function() {
