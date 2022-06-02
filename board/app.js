@@ -25,4 +25,22 @@ app.get( '/list', function ( req, res ) {
     } )
 } );
 
+app.get( '/write', function ( req, res ) {
+    res.render( 'write.ejs' );
+} );
+
+app.post( '/writeAf', function ( req, res ) {
+    var body = req.body;
+    console.log( body );
+
+    var sql = 'INSERT INTO db_test.board VALUES ( ?, ?, ?, NOW() )';
+    const params = [ body.id, body.title, body.content ];
+    console.log( sql );
+
+    conn.query( sql, params, function ( err ) {
+        if ( err ) { console.log( `query is not cxcute. insert fail...\n${err}` ); }
+        else { res.redirect( '/list' ); }
+    } );
+} );
+
 app.listen( port, () => console.log( `Server is running... [ ${port} ]` ) );
